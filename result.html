@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agent Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9fafb;
+            color: #333;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        pre {
+            background: #eee;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4CAF50;
+            border: 1px solid #4CAF50;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+        .back-link:hover {
+            background: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Agent Execution Result</h1>
+
+    <pre>
+{% for line in logs %}
+{{ line }}
+{% endfor %}
+    </pre>
+
+    <a href="/" class="back-link">← Back to Files</a>
+
+</body>
+</html>

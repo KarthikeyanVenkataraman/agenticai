@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agent UI - Process Uploaded PDFs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f7fa;
+        }
+        .logo {
+            width: 200px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+            font-weight: normal;
+        }
+        .file-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+        .file-table th, .file-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        .file-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .file-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .file-table tr:hover {
+            background-color: #f1f1f1;
+        }
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <img src="https://via.placeholder.com/200x50?text=Your+Logo" alt="Logo" class="logo"> -->
+
+    <h1>Agentic AI Demo</h1>
+
+    <h2>Agent 1 - eKYC - Validates the customer’s KYC to determine onboarding eligibility. If verification fails, a human review is triggered via email; if successful, the process seamlessly hands off to Agent 2.</h2>
+
+    <h2>Agent 2 - Onboarding - Automates customer onboarding by consulting Standard Operating Procedures stored in the Chrome Vector DB. If the applicant is a major, onboarding proceeds automatically; if a minor, a human loop is initiated to manage the next steps with an email notification.</h2>
+
+    {% if files %}
+        <table class="file-table">
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in files %}
+                <tr>
+                    <td>{{ file }}</td>
+                    <td>
+                        <form action="/submit" method="POST" style="display:inline;">
+                            <input type="hidden" name="filename" value="{{ file }}">
+                            <button type="submit" class="submit-button">SUBMIT</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No uploaded files found.</p>
+    {% endif %}
+
+</body>
+</html>
