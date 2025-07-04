@@ -30,5 +30,7 @@ I have developed a functional prototype on my local machine for a FinTech use ca
 * onboarding_agent.py - Onboarding agent for customer
 * agent_ui.py - UI built just for demo purposes to show how the agent runs in LangChain.
 
+* UI related files (.html) needs to be stored in a folder like C:\Karthik\agenticai\code\templates
+
 
 
