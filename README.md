@@ -1,7 +1,5 @@
 # Agentic AI Driven eKYCand Automated Onboarding
 
-==== This is work in progress. Will be updated in detail in couple of days. Idea is to pull the code and setup in your own devlopment environment to see the power of Agentic AI. It requires few additional libraries and also ChromaDB which I will provide detailed instructions to setup. ====
-
 I have developed a functional prototype on my local machine for a FinTech use case utilizing Agentic AI. I aimed to showcase two AI agents (ekyc & customer onboarding) interacting with one another, while incorporating a RAG in the loop. Attached are screenshots for your reference. In summary, I have employed LangChain and the OpenAI API to utilize the GPT-3.5 Turbo LLM, along with ChromaDB to establish vector embeddings for my customer onboarding rules, which are stored in PDF format as plain text. ChromaDB serves to illustrate the capability of integrating RAG within an agentic workflow. Furthermore, although we prefer agents to operate autonomously, there remains a necessity for human intervention. I have constructed two scenarios where Human-in-the-Loop (HILT) is also demonstrated through an email notification.
 
 <img width="818" alt="image" src="https://github.com/user-attachments/assets/5b95af9c-055e-4f58-ae94-d6e806d8231a" />
